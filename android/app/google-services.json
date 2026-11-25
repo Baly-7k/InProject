@@ -1,37 +1,45 @@
 {
   "project_info": {
-    "project_number": "774152076154",
-    "project_id": "inproyect-c5b0a",
-    "storage_bucket": "inproyect-c5b0a.firebasestorage.app"
+    "project_number": "735342890331",
+    "project_id": "inproject-3593e",
+    "storage_bucket": "inproject-3593e.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:774152076154:android:0730e12d9fb3ac79e334c3",
+        "mobilesdk_app_id": "1:735342890331:android:7a9bf3e88c80376c8d1e7e",
         "android_client_info": {
-          "package_name": "com.example.app"
+          "package_name": "com.inproyect.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "774152076154-fk7qc3d3829fc17u67mtke536dim250d.apps.googleusercontent.com",
+          "client_id": "735342890331-2i3eanamps8d6aq9u9qrvvdc6pk362qh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inproyect.app",
+            "certificate_hash": "93f6e91a07dbad6db539220dfa63a48ca2516a67"
+          }
+        },
+        {
+          "client_id": "735342890331-kfp9f8cgij1lkc8kvi72hsms25oafd16.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB0_p5DMjpc_BtzYnDHksBM3UI4I9AQGOI"
+          "current_key": "AIzaSyC-w6-UYePip1eZka0IqBZKbVyN0HK4JuE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "774152076154-fk7qc3d3829fc17u67mtke536dim250d.apps.googleusercontent.com",
+              "client_id": "735342890331-kfp9f8cgij1lkc8kvi72hsms25oafd16.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "774152076154-qkmccrds3gkielmafdphv4nphq10kl6c.apps.googleusercontent.com",
+              "client_id": "735342890331-c7v99u35s4u7g0pccquunqfou1o1lrgi.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.example.app"
