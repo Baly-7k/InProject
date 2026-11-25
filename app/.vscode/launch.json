@@ -1,0 +1,7 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "name": "InProject · Firebase nuevo", "request": "launch", "type": "dart", "program": "lib/main.dart" },
+    { "name": "InProject · Vista previa del panel", "request": "launch", "type": "dart", "program": "lib/main_preview.dart" }
+  ]
+}

@@ -1,0 +1,9 @@
+Buenos días, hoy no podré estar en la reunión, pero les comparto las capturas de mi avance en INPROYECT.
+
+Trabajé en el diseño del inicio, las seis categorías de los mockups, el detalle de cada rubro y la sección de ayuda con preguntas desplegables. También dejé funcionando la navegación entre las secciones y probé el avance en mi celular.
+
+Las imágenes están ordenadas: 1) inicio, 2) categorías, 3) detalle del rubro y 4) ayuda.
+
+Por ahora es una vista previa del panel, sin depender del login que está trabajando el compañero. Proyectos y Billetera todavía están pendientes; no se están haciendo pagos ni guardando trabajos desde estas pantallas.
+
+El siguiente paso será confirmar los roles actualizados con el equipo y continuar con el recorrido de proyectos y trabajos. El código y estas evidencias estarán en mi rama desarrollo/panel-mockups.

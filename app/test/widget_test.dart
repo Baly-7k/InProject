@@ -1,30 +1,60 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:material_ui/material_ui.dart';
-
-import 'package:app/main.dart';
+import 'package:app/main_preview.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('El panel permite abrir un rubro, volver y cambiar de sección', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(375, 812);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(const PanelPreview());
+    await tester.tap(find.text('Ver proyectos y trabajos'));
+    await tester.pumpAndSettle();
+    expect(find.text('Proyectos y trabajos'), findsOneWidget);
+    await tester.tap(find.text('Inicio'));
+    await tester.pumpAndSettle();
+    await tester.drag(find.byType(ListView), const Offset(0, -300));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Albañilería y obra gruesa'));
+    await tester.pumpAndSettle();
+    expect(find.text('Rubro técnico'), findsOneWidget);
+    expect(
+      find.text('Muros, pisos y trabajos de construcción.'),
+      findsOneWidget,
+    );
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Billetera'));
+    await tester.pumpAndSettle();
+    expect(find.text('InProject Wallet'), findsOneWidget);
+    await tester.tap(find.text('Ayuda'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('¿Dónde encuentro mi perfil?'));
+    await tester.pumpAndSettle();
+    expect(
+      find.text(
+        'Abre el menú lateral y selecciona Mi Perfil para revisar tus datos.',
+      ),
+      findsOneWidget,
+    );
+    expect(tester.takeException(), isNull);
+  });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  testWidgets('Las categorías caben en móvil estrecho con texto ampliado', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(320, 640);
+    tester.view.devicePixelRatio = 1;
+    tester.platformDispatcher.textScaleFactorTestValue = 1.3;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
+    await tester.pumpWidget(const PanelPreview());
+    await tester.scrollUntilVisible(find.text('Carpintería y melamina'), 200);
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
   });
 }

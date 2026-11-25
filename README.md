@@ -1,4 +1,12 @@
-# app
+# INPROYECT
+
+La versión actual de Flutter está en **`app/`** y utiliza Firebase
+**`inproyect-24922`**. Abrir `InProject.code-workspace` en VS Code para trabajar
+sobre esa carpeta. Ejecutar los comandos Flutter desde `app/`.
+
+La estructura de la raíz corresponde a la versión anterior y se conserva hasta
+coordinar su limpieza con el equipo. El primer avance del panel se documenta en
+[`app/AVANCE_PANEL.md`](app/AVANCE_PANEL.md).
 
 A new Flutter project.
 
